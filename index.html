@@ -1,0 +1,212 @@
+<html>
+<head>
+  <title>Hotel Management FeedBack</title> </head>
+  
+  <!--CSS-->
+  <link rel="stylesheet" href="pagesstyle.css">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    body {
+      font-family: product sans;
+      background-color: #F8F8F9;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      height: 30px;
+    }
+    .headertitle h1 {
+      margin: 0;
+    }
+    .headerlogo img {
+      max-width: 100%;
+      height: auto;
+      
+    }
+    @media screen and (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .headerlogo {
+        margin-top: 10px;
+      }
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .container img {
+      width: 100%; /* Ensure images fill the container width */
+      height: auto; /* Maintain aspect ratio */
+      margin: 5px; /* Add some spacing between images */
+      max-width: 300px; /* Limit maximum width of images */
+    }
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    .navbar .logout {
+      float: right;
+    }
+    @media screen and (max-width: 600px) {
+      .navbar a, .navbar .logout {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .navbar .logout {
+        float: none;
+        margin-top: 15px;
+      }
+    }
+    .language-switcher {
+      margin-top: 10px;
+    }
+    
+    .language-switcher .lang-link {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .language-switcher .lang-link:hover {
+      text-decoration: underline;
+    }
+    
+  </style>
+  
+</head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">  
+  $(document).ready(function(){
+    // Function to handle language switch
+    $(".lang-link").click(function(e){
+      e.preventDefault();
+      var lang = $(this).data("lang");
+      // Redirect to the same page with the selected language parameter
+      window.location.href = updateQueryStringParameter(window.location.href, "lang", lang);
+    });
+    
+    // Function to update query string parameter
+    function updateQueryStringParameter(uri, key, value) {
+      var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+      var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+      if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+      }
+      else {
+        return uri + separator + key + "=" + value;
+      }
+    }
+  });
+</script>
+
+
+
+<div class="header">
+  <div class="headertitle">
+    <h1>Hotel Management Feedback</h1>
+  </div>
+  <div class="headerlogo">
+    <!-- <img src="Ehotel5.jpg" width="100" alt="Logo of a Hotel" />-->
+  </div>
+  <h1>Hotel Aswad</h1>
+</div>
+<!-- NavBar-->
+<style>
+  
+</style>
+<body> 
+
+
+<div class="language-switcher">
+  <a hrefSSS class="lang-link" data-lang="en">English</a>
+  <a href="#" class="lang-link" data-lang="fr">Français</a>
+  <a href="#" class="lang-link" data-lang="ja">日本語</a>
+</div>
+  
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="ContactUS.html">Contact Us</a>
+  <a href="AboutUs.html">About Us</a>
+  <a href="Feedback.html">Feedback</a>
+  
+  <div class="logout">
+    <a href="FeedBackFetteche.html">Login</a>
+  </div>
+</div>
+
+
+<div class="content">
+  <center><img src="Ehotel5.jpg" width="190"  alt="Logo of a Hotel" /></center>
+  <center><h2>Welcome to Our Aswad Hotel</h2>
+    <p>
+      
+      Aswad Hotel, located in the heart of Kolhapur, epitomizes luxury and hospitality, seamlessly blending traditional 
+      elegance with modern comfort. Established in [year], the hotel boasts a rich history reflected in its architecture and commitment to excellence. 
+      From plush accommodations with breathtaking views to a diverse culinary journey and state-of-the-art facilities, Aswad Hotel caters to the discerning traveler's 
+      every need. The attentive staff ensures exceptional service, while versatile event spaces make it an ideal venue for conferences and weddings. Committed 
+      to sustainability, the hotel minimizes its environmental impact. Guest feedback consistently praises the hotel's exceptional service, luxurious amenities,
+      and memorable experiences. Aswad Hotel, with its unwavering dedication to providing an unparalleled stay, remains a premier destination for those 
+      seeking an extraordinary and unforgettable experience.
+      Thank you for taking the time to join our team and we look forward to making The Aswad  Hotel a great success.</center></p>
+    </div>
+    
+    <div class="container">
+      <img src="Ehotel4.jpg" alt="Image 1">
+      <img src="Ehotel3.jpg" alt="Image 2">
+      <img src="Ehotel2.jpg" alt="Image 3">
+    </div>
+    <br>
+    <br>
+    
+    <h4><center>Google Maps Links </h4><center>
+      <div class="graph">
+        <center> <a href="https://www.google.com/maps/place/PATIL+ASWAD/@16.5564579,74.2591111,3a,75y,90t/data=!3m8!1e2!
+          3m6!1sAF1QipP8d8_Ig7tYhmsqs04lnvSJMp8Dhpz8Uqbb20wP!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipP8d8_Ig7tY
+          hmsqs04lnvSJMp8Dhpz8Uqbb20wP%3Dw645-h298-k-no!7i4000!8i1846!4m9!3m8!1s0x3bc0f9aed904725d:0x8c480cf55f63050d!8m2!3d16.5566555!4d74.2590759!10e5!14m1!1BCgIg
+          AQ!16s%2Fg%2F11sbprxktp
+          ?entry=ttu" alt="google maps" width="30%" > Click Here To See On Map </a></center>
+        </div>
+        
+        <br>
+        <br>
+        <!--Navbar end-->
+        
+        <div class="footer">
+          <h3>About Us</h3>
+          <h5> 
+            Welcome to Aswad Hotel, where a legacy of luxury meets contemporary comfort. Nestled in the heart of Kolhapur, our hotel stands as a testament to 
+            refined elegance and warm hospitality. we have crafted an unparalleled experience for our guests, blending tradition
+            with modernity. From opulent accommodations and diverse dining options to state-of-the-art facilities for events and conferences, Aswad Hotel is designed to cater
+            to the diverse needs of discerning travelers. Our commitment to exceptional service is reflected in every aspect of your stay, ensuring a memorable
+            and rejuvenating experience. As we embrace sustainability, we strive to minimize our environmental footprint, making your visit not only indulgent but also
+            responsible. Thank you for choosing Aswad Hotel, where each moment is crafted to exceed your expectations..</h5>
+          </div>
+          
+        </body>
+        </html> 
